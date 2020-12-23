@@ -15,7 +15,6 @@ body {
 	justify-content: center;
 	height: 100vh;
 	margin: 0;
-	/*padding: 20px;*/
 }
 
 h1 {
@@ -80,6 +79,7 @@ p {
 	align-items: center;
 	font-family: inherit;
 	justify-content: space-between;
+	font-weight: bold;
   }
 
 .rate {

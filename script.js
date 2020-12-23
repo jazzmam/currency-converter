@@ -13,7 +13,10 @@ function calculate() {
 	.then(res => res.json()
 	.then(data => {
 		const rate = data.rates[currency_to];
+
 		rate_element.innerHTML = `1 ${currency_from} = ${rate} ${currency_to}`;
+
+		amount_to_element.value = (amount_from_element.value * rate).toFixed(3);
 	}));
 }
 
@@ -21,5 +24,12 @@ currency_from_element.addEventListener('change', calculate);
 amount_from_element.addEventListener('input', calculate);
 currency_to_element.addEventListener('change', calculate);
 amount_to_element.addEventListener('input', calculate);
+
+swap_button.addEventListener('click', () => {
+	const temp = currency_from_element.value;
+	currency_from_element.value = currency_to_element.value;
+	currency_to_element.value = temp;
+	calculate();
+});
 
 calculate();
