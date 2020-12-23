@@ -83,11 +83,13 @@ p {
 	font-weight: bold;
 }
 
-.rate {
-	color: var(--primary-color);
-	font-size: 14px;
-	padding: 0 10px;
-	letter-spacing: .01rem;
+.amount-from[type=number]::-webkit-inner-spin-button {
+	opacity: 1;
+	padding: 50x;
+}
+
+.amount-to[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
 }
 
 select:focus,
@@ -95,6 +97,15 @@ input:focus,
 button:focus {
 	outline: 0;
 }
+
+.rate {
+	color: var(--primary-color);
+	font-size: 14px;
+	padding: 0 10px;
+	letter-spacing: .01rem;
+}
+
+
 
 @media(max-width: 360px) {
 	.container {
