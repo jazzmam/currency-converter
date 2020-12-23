@@ -38,11 +38,10 @@ p {
 	font-family: inherit;
 	background: var(--primary-color);
 	text-transform: uppercase;
-    padding: 7px 20px;
 	border-radius: 5px;
 	border-style: none;
 	font-size: 12px;
-	padding: 5px 15px;
+	padding: 8px 20px;
 	cursor: pointer;
 }
 
@@ -80,6 +79,7 @@ p {
 	display: flex;
 	align-items: center;
 	font-family: inherit;
+	justify-content: space-between;
   }
 
 .rate {

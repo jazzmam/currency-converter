@@ -6,16 +6,15 @@ const rate_element = document.getElementById('rate');
 const swap_button = document.getElementById('swap');
 
 function calculate() {
-    const currency_from = currency_from_element.value;
-    const currency_to = currency_to_element.value;
+	const currency_from = currency_from_element.value;
+	const currency_to = currency_to_element.value;
 
-    fetch(`https://api.exchangerate-api.com/v4/latest/${currency_from}`)
-    .then(res => res.json()
-    .then(data => {
-        console.log(data.rates);
-        console.log(data.rates[currency_to]);
-        rate_element.innerHTML = data.rates[currency_to];
-    }));
+	fetch(`https://api.exchangerate-api.com/v4/latest/${currency_from}`)
+	.then(res => res.json()
+	.then(data => {
+		const rate = data.rates[currency_to];
+		rate_element.innerHTML = `1 ${currency_from} = ${rate} ${currency_to}`;
+	}));
 }
 
 currency_from_element.addEventListener('change', calculate);
