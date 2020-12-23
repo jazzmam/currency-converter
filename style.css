@@ -37,6 +37,8 @@ p {
 	color: #fff;
 	font-family: inherit;
 	background: var(--primary-color);
+	text-transform: uppercase;
+    padding: 7px 20px;
 	border-radius: 5px;
 	border-style: none;
 	font-size: 12px;
@@ -73,6 +75,12 @@ p {
 	font-size: 35px;
 	text-align: right;
 }
+
+.swap-rate-container {
+	display: flex;
+	align-items: center;
+	font-family: inherit;
+  }
 
 .rate {
 	color: var(--primary-color);
